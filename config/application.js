@@ -15,7 +15,7 @@ module.exports = require(process.env['LINEMAN_MAIN']).config.extend('application
 
   // we don't have handlebars templates or coffeescript by default
   removeTasks: {
-    common: ["handlebars", "coffee"]
+    common: ["handlebars"]
   },
 
   // task override configuration
@@ -59,6 +59,12 @@ module.exports = require(process.env['LINEMAN_MAIN']).config.extend('application
       files: "app/templates/**/*.html",
       tasks: ["ngtemplates", "concat"]
     }
+  },
+  
+  server:{
+      web:{
+          port:process.env["PORT"]
+      }
   }
 
 });

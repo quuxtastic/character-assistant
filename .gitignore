@@ -7,6 +7,8 @@ lib-cov
 *.pid
 *.gz
 
+.DS_Store
+
 pids
 logs
 results
@@ -15,3 +17,9 @@ npm-debug.log
 
 generated
 dist
+
+.c9revisions
+
+node_modules
+
+test/tmp

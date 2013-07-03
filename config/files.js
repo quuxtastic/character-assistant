@@ -16,17 +16,6 @@ module.exports = require(process.env['LINEMAN_MAIN']).config.extend('files', {
     dest: "generated/angular/template-cache.js"
   },
 
-  js: {
-    vendor: [
-      "vendor/js/angular.js",
-      "vendor/js/**/*.js"
-    ],
-    app: [
-      "app/js/app.js",
-      "app/js/**/*.js"
-    ]
-  },
-
   less: {
     compile: {
       options: {
