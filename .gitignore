@@ -19,8 +19,7 @@ generated
 dist
 
 .c9revisions
-c9_targets/tmp
 
 node_modules
 
-test/tmp
+/test/tmp
