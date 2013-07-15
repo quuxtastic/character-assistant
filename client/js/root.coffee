@@ -8,13 +8,13 @@ angular.module('app')
         ($routeProvider) ->
             $routeProvider
                 .when '/campaigns',
-                    templateUrl:'campaign_list.html'
-                    controller:'CampaignListController'
+                    templateUrl: 'campaign-list.html'
+                    controller: 'CampaignListController'
                 .when '/campaigns/:campaignID',
-                    templateUrl:'campaign.html'
-                    controller:'CampaignDetailController'
+                    templateUrl: 'campaign-detail.html'
+                    controller: 'CampaignDetailController'
                 .otherwise
-                    redirectTo:'/campaigns'
+                    redirectTo: '/campaigns'
     ]
 
 # root controller
