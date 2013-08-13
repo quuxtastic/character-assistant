@@ -11,5 +11,6 @@ client_root = path.join __dirname, '..', 'client'
 app.use express.static path.join client_root, 'html'
 app.use '/js', express.static path.join client_root, 'js'
 app.use '/css', express.static path.join client_root, 'css'
+app.use '/img', express.static path.join client_root, 'assets', 'img'
 
 app.listen 8080
