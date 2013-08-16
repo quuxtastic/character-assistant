@@ -1,14 +1,14 @@
-<h1>{{campaign.name}}</h1>
-<p>{{campaign.blurb}}</p>
-<p>{{campaign.description}}</p>
+<form name="campaign-details">
+    <label for="name">Campaign Name</label>
+    <input name="name" type="text" ng-model="campaign.name">
 
-Rules modules used:
-<table>
-    <th><td>Name</td><td>Script Format</td></th>
-    <tr ng-repeat="mod in rule_modules">
-        <td>{{mod.name}}</td>
-        <td>{{mod.script_type}}</td>
-    </tr>
-</table>
-<button>Add module</button>
-<button>Upload custom module</button>
+    <br>
+
+    <label for="blurb">Short Description</label>
+    <input name="blurb" type="text" ng-model="campaign.blurb">
+
+    <br>
+
+    <label for="info">Description</label>
+    <textarea name="info" ng-model="campaign.info"></textarea>
+</form>

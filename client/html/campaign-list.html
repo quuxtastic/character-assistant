@@ -1,22 +1,16 @@
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="span2">
-            Search: <input ng-model="query">
-            Sort by :
-            <select ng-model="sort">
-                <option value="name" selected>Alphabetical</option>
-            </select>
-        </div>
         <div class="span10">
+            <a href="/#/campaign/new">Add New Campaign</a>
             <ul class="campaigns">
                 <li
-                    ng-repeat="campaign in campaigns | filter:query | orderBy:sort"
+                    ng-repeat="campaign in campaigns"
                 >
-                    <a href="#/campaigns/{{campaign.name}}">
+                    <a href="/#/campaign/{{campaign.name}}">
                         {{campaign.name}}
                     </a>
                     <p>
-                        {{campaign.snippet}}
+                        {{campaign.blurb}}
                     </p>
                 </li>
             </ul>

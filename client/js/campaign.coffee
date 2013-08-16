@@ -1,15 +1,12 @@
-CampaignResource = $resource '/api/campaign/:name'
-
 angular.module('app')
-    .controller 'CampaignListController', ($scope) ->
-        $scope.campaigns = [
-            {
-                name: 'test'
-                snippet: 'test snippet'
-                description: 'test description'
-            }
-        ]
+    .controller 'CampaignListController', ($scope, CampaignDataService) ->
+        $scope.campaigns = CampaignDataService.all()
 
-angular.module('app')
-    .controller 'CampaignDetailController', ($scope) ->
-        $scope.campaign = CampaignResource.get name
+    .controller 'CampaignDetailController', ($scope, $routeParams, CampaignDataService) ->
+        $scope.campaign = CampaignDataService.get $routeParams.name
+#    .controller 'CampaignListController', ($scope,DataService) ->
+#        Dataservice.query().then (val) -> $scope.campaigns = val
+
+#    .controller 'CampaignDetailController', ($scope,$routeParams,DataService) ->
+#        DataService.get($routeParams.name)?.then (val) ->
+#            $scope.campaign = val
