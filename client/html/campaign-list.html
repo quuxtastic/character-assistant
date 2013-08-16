@@ -4,19 +4,15 @@
             Search: <input ng-model="query">
             Sort by :
             <select ng-model="sort">
-                <option value="name">Alphabetical</option>
+                <option value="name" selected>Alphabetical</option>
             </select>
         </div>
         <div class="span10">
             <ul class="campaigns">
                 <li
                     ng-repeat="campaign in campaigns | filter:query | orderBy:sort"
-                    class="thumbnail"
                 >
-                    <a href="#/campaigns/{{campaign.name}}" class="thumb">
-                        <img ng-src="{{campaign.thumbUrl}}">
-                    </a>
-                    <a href="#?campaigns/{{campaign.name}}">
+                    <a href="#/campaigns/{{campaign.name}}">
                         {{campaign.name}}
                     </a>
                     <p>

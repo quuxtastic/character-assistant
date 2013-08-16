@@ -1,4 +1,14 @@
-<img ng-src="{{campaign.thumbUrl}}">
-
 <h1>{{campaign.name}}</h1>
+<p>{{campaign.blurb}}</p>
 <p>{{campaign.description}}</p>
+
+Rules modules used:
+<table>
+    <th><td>Name</td><td>Script Format</td></th>
+    <tr ng-repeat="mod in rule_modules">
+        <td>{{mod.name}}</td>
+        <td>{{mod.script_type}}</td>
+    </tr>
+</table>
+<button>Add module</button>
+<button>Upload custom module</button>
